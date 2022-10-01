@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404040"
+    tools:context=".RetrofitIC.ApiCallingAll">
+
+    <Button
+        android:id="@+id/filter_0_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="0-50"/>
+
+    <Button
+        android:id="@+id/filter_50_200"
+        android:layout_toEndOf="@+id/filter_0_200"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="50-200"/>
+
+    <Button
+        android:id="@+id/filter_morethan200"
+        android:layout_toEndOf="@+id/filter_50_200"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:text="200 up"/>
+
+
+    <TextView
+        android:id="@+id/product_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="8"
+        android:layout_below="@id/filter_50_200"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/user_txt"
+        android:layout_below="@id/product_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="8"
+        android:visibility="gone"
+        android:textColor="@color/teal_200" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_recyclerview"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_0_200"/>
+
+</RelativeLayout>
